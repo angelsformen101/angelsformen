@@ -1,0 +1,81 @@
+# ==============================================================================
+# Robots.txt for AngelsForMen (https://angelsformen.com)
+# Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
+# ==============================================================================
+
+# General Search Engine Crawlers
+User-agent: *
+Allow: /
+Allow: /locations/
+Allow: /public/
+Disallow: /*.py$
+Disallow: /scratch/
+Disallow: /*?*sort=
+
+# Major Search Engines
+User-agent: Googlebot
+Allow: /
+Allow: /locations/
+Allow: /public/
+
+User-agent: Googlebot-Image
+Allow: /public/*.webp
+Allow: /public/*.png
+Allow: /public/*.jpg
+Allow: /logo.png
+Allow: /favicon.png
+
+User-agent: Googlebot-Video
+Allow: /public/*.mp4
+
+User-agent: Bingbot
+Allow: /
+Allow: /locations/
+Allow: /public/
+
+User-agent: Applebot
+Allow: /
+Allow: /locations/
+
+User-agent: DuckDuckBot
+Allow: /
+Allow: /locations/
+
+User-agent: YandexBot
+Allow: /
+Allow: /locations/
+
+# AI, LLM & Answer Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini)
+User-agent: GPTBot
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+# Host & Sitemap Directives
+Host: https://angelsformen.com
+Sitemap: https://angelsformen.com/sitemap.xml

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Abuse & Fake Profiles | AngelsForMen</title>
+    <meta name="description" content="Report fake profiles, scams, human trafficking, or policy violations on AngelsForMen. We maintain a strict zero-tolerance policy to ensure a safe community.">
+    
+    <!-- Indexability & Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://angelsformen.com/report-abuse.html" />
+    
+    <!-- Regional Targeting & Hreflangs -->
+    <link rel="alternate" hreflang="en-in" href="https://angelsformen.com/report-abuse.html" />
+    <link rel="alternate" hreflang="x-default" href="https://angelsformen.com/report-abuse.html" />
+
+    <!-- Open Graph (OG) Tags -->
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Report Abuse & Fake Profiles | AngelsForMen" />
+    <meta property="og:description" content="Report fake profiles, scams, human trafficking, or policy violations on AngelsForMen. We maintain a strict zero-tolerance policy to ensure a safe community." />
+    <meta property="og:url" content="https://angelsformen.com/report-abuse.html" />
+    <meta property="og:site_name" content="AngelsForMen" />
+    <meta property="og:image" content="https://angelsformen.com/logo.png" />
+    <meta property="og:image:secure_url" content="https://angelsformen.com/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AngelsForMen Logo" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Report Abuse & Fake Profiles | AngelsForMen" />
+    <meta name="twitter:description" content="Report fake profiles, scams, human trafficking, or policy violations on AngelsForMen. We maintain a strict zero-tolerance policy to ensure a safe community." />
+    <meta name="twitter:image" content="https://angelsformen.com/logo.png" />
+
+    <!-- Mobile UI & Theme Color -->
+    <meta name="theme-color" content="#121212" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <style>
+        /* Base Styles & Dark Theme */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --primary-color: #e91e63;
+            --text-main: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --input-bg: #2a2a2a;
+            --border-color: #333333;
+            --alert-red: #ff4c4c;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 26px; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        .logo span { color: var(--primary-color); }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        nav ul li a { color: #fff; font-weight: 500; text-transform: uppercase; font-size: 14px; }
+
+        /* Page Layout */
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .page-header { text-align: center; margin-bottom: 50px; }
+        .page-header h1 { font-size: 2.8rem; color: #fff; margin-bottom: 10px; }
+        .page-header p { color: var(--text-muted); font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+
+        /* Report Grid Layout */
+        .report-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+        }
+
+        /* Form Styles */
+        .report-form-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--alert-red);
+            box-shadow: 0 4px 15px rgba(255, 76, 76, 0.15);
+        }
+        .report-form-section h2 { color: var(--alert-red); margin-top: 0; margin-bottom: 20px; font-size: 1.8rem; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ddd;
+        }
+        .form-group label span.required { color: var(--alert-red); }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--alert-red);
+        }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        .form-group .help-text { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; }
+        
+        .btn-submit {
+            background-color: var(--alert-red);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-submit:hover { background-color: #d32f2f; }
+
+        /* Sidebar Info Styles */
+        .sidebar-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .info-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .info-card h3 { color: #fff; margin-top: 0; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .info-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 10px; }
+        .info-card strong { color: #fff; }
+        .info-card ul { padding-left: 20px; color: var(--text-muted); }
+        .info-card li { margin-bottom: 8px; }
+
+        .emergency-card {
+            border-color: var(--alert-red);
+            background-color: rgba(255, 76, 76, 0.05);
+        }
+        .emergency-card h3 { color: var(--alert-red); border-bottom-color: var(--alert-red); }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 2px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        .footer-links { margin-top: 15px; }
+        .footer-links a { color: var(--text-muted); margin: 0 10px; font-size: 0.9rem; }
+
+        /* Responsive Design */
+        @media(max-width: 900px) { 
+            .report-grid { grid-template-columns: 1fr; }
+        }
+        @media(max-width: 768px) { 
+            nav ul { display: none; } 
+            .page-header h1 { font-size: 2rem; } 
+            .report-form-section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Angels<span>For</span>Men</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/call-girls">Call Girls</a></li>
+                <li><a href="/massage">Massages</a></li>
+                <li><a href="/male-escorts">Male Escorts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Report Abuse or Fake Profiles</h1>
+            <p>We are committed to maintaining a safe, genuine, and secure environment. If you encounter a profile that violates our strict Terms & Conditions, please report it immediately. All reports are treated with absolute confidentiality.</p>
+        </div>
+
+        <div class="report-grid">
+            
+            <!-- Left Column: Report Form -->
+            <section class="report-form-section">
+                <h2>File an Incident Report</h2>
+                <form action="/submit-report" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="profile_url">Offending Profile URL / Link <span class="required">*</span></label>
+                        <input type="url" id="profile_url" name="profile_url" placeholder="e.g., https://angelsformen.com/escorts/profile-name" required>
+                        <span class="help-text">Please paste the exact link to the profile you are reporting.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Reporting <span class="required">*</span></label>
+                        <select id="reason" name="reason" required>
+                            <option value="">-- Select a Reason --</option>
+                            <option value="fake_profile">Fake Profile / Catfishing / Stolen Photos</option>
+                            <option value="underage">Suspected Underage Individual (Under 18)</option>
+                            <option value="trafficking">Suspected Coercion / Human Trafficking</option>
+                            <option value="scam">Financial Scam / Demanding Upfront Digital Payments</option>
+                            <option value="harassment">Harassment / Threats / Blackmail</option>
+                            <option value="illegal">Solicitation of Illegal Substances</option>
+                            <option value="other">Other Terms of Service Violation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email Address (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="Provide an email if you wish to be contacted regarding this report">
+                        <span class="help-text">Your identity will never be shared with the reported party.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Detailed Description of the Incident <span class="required">*</span></label>
+                        <textarea id="description" name="description" placeholder="Please provide specific details, times, dates, and any phone numbers or WhatsApp accounts the offender used to contact you." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Abuse Report</button>
+                </form>
+            </section>
+
+            <!-- Right Column: Info & Policies -->
+            <aside class="sidebar-info">
+                
+                <!-- Zero Tolerance Policy -->
+                <div class="info-card">
+                    <h3>Our Zero Tolerance Policy</h3>
+                    <p>AngelsForMen actively monitors and moderates its platform. We will immediately and permanently ban users or advertisers who engage in:</p>
+                    <ul>
+                        <li>Posting images of individuals without their consent.</li>
+                        <li>Engaging in bait-and-switch tactics or financial fraud.</li>
+                        <li>Exploiting minors or engaging in human trafficking.</li>
+                    </ul>
+                </div>
+
+                <!-- What happens next -->
+                <div class="info-card">
+                    <h3>What Happens After I Report?</h3>
+                    <p><strong>1. Immediate Review:</strong> Our moderation team receives the report instantly and initiates an investigation within 12 hours.</p>
+                    <p><strong>2. Profile Suspension:</strong> If there is sufficient preliminary evidence of a violation, the offending profile is temporarily hidden from the public directory.</p>
+                    <p><strong>3. Final Action:</strong> Upon confirmation of abuse, the advertiser is permanently banned, their IP is blocked, and if necessary, their information is preserved for law enforcement.</p>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="info-card emergency-card">
+                    <h3>Are You in Immediate Danger?</h3>
+                    <p>If you or someone else is in immediate physical danger, or if you suspect an active case of human trafficking, do not wait for our moderation team to respond.</p>
+                    <p><strong>Please contact your local law enforcement agency or dial emergency services (e.g., 100 or 112 in India) immediately.</strong></p>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AngelsForMen. All Rights Reserved. This website contains adult material (18+ only).</p>
+        <div class="footer-links">
+            <a href="/terms.html">Terms & Conditions</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/safety-guidelines">Safety Guidelines</a>
+            <a href="/contact.html">Contact Support</a>
+            <a href="/report-abuse.html">Report Abuse</a>
+        </div>
+    </footer>
+
+</body>
+</html>
