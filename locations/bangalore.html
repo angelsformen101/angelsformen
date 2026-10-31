@@ -257,6 +257,40 @@
             font-size: 14px;
         }
 
+        /* Mobile Hamburger Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 22px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .menu-toggle .bar {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: translateY(9.5px) rotate(45deg);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: translateY(-9.5px) rotate(-45deg);
+        }
+
         /* --- Hero Section with Video Background --- */
         .video-hero {
             position: relative;
@@ -803,12 +837,76 @@
         }
 
         @media(max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                position: relative;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
             nav ul {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #0c0c0c;
+                border-bottom: 2px solid var(--primary-color);
+                padding: 10px 0;
+                gap: 0;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 14px 25px;
+                border-bottom: 1px solid #1a1a1a;
+                font-size: 15px;
+                color: #fff;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+
+            nav ul li:last-child a {
+                border-bottom: none;
+            }
+
+            nav ul li a:hover {
+                background-color: #191919;
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+
+            .video-hero {
+                height: auto;
+                min-height: 360px;
+                padding: 40px 0;
+            }
+
+            .hero-content {
+                padding: 10px 20px;
             }
 
             .hero-content h1 {
-                font-size: 2.2rem;
+                font-size: 1.85rem;
+                line-height: 1.3;
+                margin-bottom: 12px;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+                line-height: 1.5;
             }
 
             .local-seo-content {
@@ -846,8 +944,13 @@
 
     <header>
         <div class="logo">Angels<span>For</span>Men</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/call-girls.html">Call Girls</a></li>
                 <li><a href="/massage.html">Massages</a></li>
@@ -859,8 +962,8 @@
 
     <!-- H1: Optimized Video Hero Section for Bangalore -->
     <section class="video-hero">
-        <video class="video-bg" autoplay loop muted playsinline>
-            <source src="../public/dehraduncallgirl.mp4" type="video/mp4">
+        <video class="video-bg" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="../public/bangalore_escorts.webp">
+            <source src="../public/bangalore call girl.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <!-- Highly optimized H1 tag for primary KD 80+ keywords for Bangalore -->
@@ -1595,6 +1698,40 @@
                     });
                 });
             });
+
+            /* --- Mobile Navigation Menu Toggle --- */
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function () {
+                    const isOpen = navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+
+                navMenu.querySelectorAll('a').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        navMenu.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            /* --- Hero Video Autoplay Assurance for Mobile --- */
+            const heroVid = document.querySelector('.video-bg');
+            if (heroVid) {
+                heroVid.muted = true;
+                heroVid.play().catch(function () {});
+            }
         });
     </script>
 </body>
